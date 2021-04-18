@@ -2,10 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 function CardItem(props){
+    const path ="asset/"+props.path;
     return(
-        <>
+        <div>
             <li className='cards--item'>
-        <Link className='cards--item--link' to={props.path}>
+        <Link className='cards--item--link' to={path}>
           <figure className='cards--item--pic--wrap' data-category={props.label}>
             <img
               className='cards--item--img'
@@ -18,7 +19,7 @@ function CardItem(props){
           </div>
         </Link>
       </li>
-        </>
+        </div>
     )
 }
 export default CardItem;
